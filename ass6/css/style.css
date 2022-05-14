@@ -476,10 +476,14 @@ text-align: center;
 
 }
 /* /////////////////////footer/////////// */
-footer{
-    background-color: #0078FF;
+/* start footer */
+
+.container9-9 {
+    background-color: #0078ff;
+    padding: 20px 0;
     color: #fff;
 }
-footer a{
-color: #fff;
-}
+
+
+
+/* end footer */
