@@ -1,0 +1,485 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.root{
+    --main-color:#0078FF ;
+    --sec-color:red;
+}
+body{
+    color:#4e4e4e;
+    background-color: #f5f5f5;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    
+}
+h1, h2, h3, h4, h5, h6 {
+    color: #1e1e1e;
+}
+/* ////////////////////start nav-bar/////////////////////////////////// */
+nav{
+    background-color: #040404;
+}
+/* nav ul li .active{
+    position: relative;
+}
+
+nav ul li .active::after{
+   content: "";
+   position: absolute;
+   width: 10%;
+   height:2px;
+   top: 84%;
+   left: 15%;
+   background-color:#fff;
+} */
+
+nav  .navbar-nav .nav-item  > a {
+    position: relative;
+} 
+
+nav .navbar-nav .nav-item  > a::after{
+   content: "";
+   position: absolute;
+   width: 0%;
+   height:2px;
+   top: 84%;
+   left: 15%;
+   background-color:#fff;
+   transition: all .1s;
+
+}
+nav  .navbar-nav li  a:hover:after {
+   width: 80%;
+
+}
+
+.dropdown1{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding:0;
+    width: 200px;
+    visibility: hidden;
+    transition: all 0.5s;
+    z-index: 99;
+}
+
+.dropdown2{
+    position: absolute;
+    top: 0%;
+    left: 100%;
+    padding:0 ;
+    width: 200px;
+    visibility: hidden;
+    transition: all 0.5s;
+}
+
+.drop:hover .dropdown1{
+    visibility: visible;
+}
+
+.dropdown-item1:hover .dropdown2{
+    visibility: visible;
+   
+}
+.dropdown1  .dropdown2 li a{
+    color: #4e4e4e !important ;
+}
+
+@media screen and (max-width:992px){
+    {font-size: 10px;}
+    nav  .navbar-nav li  a:hover,
+    nav  .navbar-nav li  a:hover:after{
+        color: #0078FF !important;
+        width: 0;
+    }
+}
+/* ////////////////////end nav-bar/////////////////////////////////// */
+/* /////////////////////////////start header///////////////// */
+header{
+    background-image: url(../imgs/hero-bg.jpg);
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+   }
+   .header-layer{
+       width: 100%;
+       height: 100%;
+       background-color: rgba(0, 0, 0, 0.5);
+   }
+   .header-layer h1{
+       color: #fff;
+       font-size: 4.5rem;
+       align-items: center;
+   }
+   .header-layer p{
+       font-size: 2.5rem;
+   }
+   .header-layer p::after{
+       content: "|";
+       animation-name:typing;
+       animation-duration: 10s;
+       animation-iteration-count: infinite;
+   
+   }
+   @keyframes typing {
+       1% {content: "D |"; }
+       2% {content: "De |";}
+       3% {content: "Des |";}
+       4% {content: "Desi |";}
+       5% {content:"Desig |";}
+       6% {content:"Design |";}
+       7% {content:"Designe |";}
+       8% {content:"Designer |";}
+       9% {content:"Designer |";}
+       10% {content:"Designer |";}
+       11% {content:"Designe |";}
+       12% {content:"Design |";}
+       13% {content:"Desig |";}
+       14% {content:"Desi |";}
+       15% {content:"Des |";}
+       16% {content:"De |";}
+       17% {content:"Dev |";}
+       18% {content:"Deve |";}
+       18% {content:"Devel |";}
+       19% {content:"Develo |";}
+       20% {content:"Develop |";}
+       21% {content:"Develope |";}
+       22% {content:"Developer |";}
+       23% {content:"Developer |";}
+       24% {content:"Developer |";}
+       25% {content:"Develope |";}
+       26% {content:"Develop |";}
+       27% {content:"Develo |";}
+       28% {content:"Devel |";}
+       29% {content:"Deve |";}
+       30% {content:"Dev |";}
+       31% {content:"De |";}
+       32% {content:"D |";}
+       33% {content:" |";}
+       34% {content:" |";}
+       35% {content:" |";}
+       36% {content:"F |";}
+       37% {content:"Fr |";}
+       38% {content:"Fre |";}
+       39% {content:"Free |";}
+       40% {content:"Freel |";}
+       41% {content:"Freela |";}
+       42% {content:"Freelan |";}
+       43% {content:"Freelanc |";}
+       44% {content:"Freelance |";}
+       45% {content:"Freelancer |";}
+       46% {content:"Freelancer |";}
+       47% {content:"Freelancer |";}
+       48% {content:"Freelance |";}
+       49% {content:"Freelanc |";}
+       50% {content:"Freelan |";}
+       51% {content:"Freela |";}
+       52% {content:"Freel |";}
+       53% {content:"Free |";}
+       54% {content:"Fre |";}
+       55% {content:"Fr |";}
+       56% {content:"F |";}
+       57% {content:" |";}
+       58% {content:" |";}
+       59% {content:" |";}
+       60% {content:"P |";}
+       61% {content:"Ph |";}
+       62% {content:"Pho |";}
+       63% {content:"Phot |";}
+       64% {content:"Photo |";}
+       65% {content:"Photog |";}
+       66% {content:"Photogr |";}
+       67% {content:"Photogrp |";}
+       68% {content:"Photogrph |";}
+       69% {content:"Photogrphe |";}
+       70% {content:"Photogrpher |";}
+       75% {content:"Photogrpher |";}
+       80% {content:"Photogrpher |";}
+       82% {content:"Photogrphe |";}
+       84% {content:"Photogrph |";}
+       86% {content:"Photogrp |";}
+       90% {content:"Photogr |";}
+       92% {content:"Photog |";}
+       93% {content:"Photo |";}
+       94% {content:"Phot |";}
+       95% {content:"Pho |";}
+       98% {content:"Ph |";}
+       99% {content:"P |";}
+       100% {content:" |";}
+       
+   } 
+
+/* /////////////////////////////end header///////////////// */
+/* /////////////////////////////start about///////////////// */
+
+.about .row .about-me .title h5{
+position: relative;
+color: #040404;
+font-size: 2rem;
+}
+.about .row .about-me .title h5::after{
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 18%;
+    background-color:#0078FF;
+    top: 100%;
+    left: 0;
+}
+.about .data span{
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #040404;
+}
+.about .data p {
+    font-size: 1rem;
+}
+.about .row .about-me p{
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+.skills h5{
+    font-size: 1.5rem;
+}
+/* /////////////////////////////end about///////////////// */
+/* /////////////start services//////////////////// */
+.title-box{
+    position: relative;
+
+}
+.title{
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.sub-title{
+     font-size: 1.1rem;
+}
+
+.title-box::after{
+    content: "";
+    width: 10%;
+    height: 7px;
+    background-color: #0078FF;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.icon {
+    height: 100px;
+    width: 100px;
+    font-size: 2rem;
+    border-radius: 50%;
+    line-height: 1.55;
+    box-shadow: 0 0 0 10px #0078ff;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    transition: all .5s;
+}
+
+.services .icon{
+    margin: 0 auto;
+}
+.icon i{
+    color: #1e1e1e;
+    font-size: 2rem;
+    border: none;
+    transition: all .5s;
+}
+.services .service-box:hover .icon {
+    box-shadow: 0 0 0 10px #CDE1F8;
+    background-color: #0078FF;
+
+}
+.services .service-box:hover .icon i {
+    box-shadow: 0 0 0 10px #CDE1F8;
+    color: #fff;
+
+}
+/* ////////////////////end services//////// */
+/* ////////////////////start counter//////// */
+.counters{
+    width: 100%;
+    height: 50vh;
+    background-image: url(../imgs/counters-bg.jpg);
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+     position: relative; 
+}
+.counters-overlay{
+    
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color:rgba(0,120, 255, 0.5);
+}
+/* ////////////////////end counter//////// */
+/* /////////////start portfolio///////////////// */
+.portfolio .card{
+    overflow: hidden;
+
+}
+.portfolio .card-photo{
+    overflow: hidden;
+}
+.portfolio img{
+    overflow: hidden;
+    transition: all 1s;
+}
+.portfolio img:hover{
+    transform: scale(1.3);
+}
+.portfolio i{
+    font-size: 2.5rem;
+}
+.portfolio span{
+    color: #0078FF;
+}
+
+/* /////////////end portfolio///////////////// */
+/* /////////////////start testimonial//////////// */
+.testimonial{
+    
+    width: 100%;
+    height: 75vh;
+    background-image: url(../imgs/overlay-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.testimonial-overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(77, 159, 243, 0.7);
+}
+
+.testimonial .carousel-inner .carousel-item img{
+    width: 150px;
+}
+.testimonial .clients h4,
+.testimonial .clients p{
+    color: #fff;
+}
+.carousel-indicators [data-bs-target]{
+    width: 10px;
+    height:10px;
+    border-radius: 50%;
+}
+/* /////////////////end testimonial//////////// */
+/* ///////////////////start Blog/////////////////// */
+.category{
+    display: inline-block;
+    background-color: #0078FF;
+    margin: 0 auto;
+    text-transform: uppercase;
+    transform: translate(0,-50%);
+}
+.category h6{
+    color: #fff;
+}
+.card-body a{
+    font-size: 1.2rem;
+    color: #040404;
+    transition: all 0.5s;
+}
+.card-body a:hover{
+    color: #0078FF;
+}
+.author img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.author a{
+    color: #040404;
+    transition:all 0.5s;
+}
+.author a:hover{
+    color: #0078FF;
+}
+
+/* ///////////////////end Blog/////////////////// */
+/* //////////////////contact//////////////// */
+.contact{
+    background-image: url(../imgs/overlay-bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+.contact .overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,120, 255, 0.5);
+}
+.contact .container{
+    background-color: #fff;
+}
+.contact h5{
+font-size: 2rem;
+color: #1e1e1e;
+text-transform: uppercase;
+position: relative;
+display: inline-block;
+}
+.contact h5:after{
+    content: "";
+    width: 50%;
+    height: 3px;
+    background-color: #0078FF;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+textarea{
+        width: 100%;
+}
+.contact button{
+    border-radius: 5rem;
+    background-color: #0078FF;
+    cursor: pointer;
+    color: #fff;
+    padding: 10px 24px;
+text-align: center;
+}
+.contact i{
+    color: #0078FF;
+}
+.social{
+    /* width: 40px;
+    height: 40px; */
+    /* border-radius: 50%; */
+    /* border: #0078FF 3px solid; */
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+.social i {
+    font-size: 1.7rem;
+
+}
+/* /////////////////////footer/////////// */
+footer{
+    background-color: #0078FF;
+    color: #fff;
+}
+footer a{
+color: #fff;
+}
